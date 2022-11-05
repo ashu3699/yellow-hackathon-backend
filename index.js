@@ -11,7 +11,7 @@ app.use(cors());
 app.use('/api',routes);
 
 //start server
-app.listen(3000, () => {
+app.listen(3000 || process.env.PORT, () => {
     console.log('Server on port 3000');
 });
 
