@@ -8,6 +8,13 @@ router.get('/expenses', (req, res) => {
     });
 })
 
+//me
+router.get('/me', (req, res) => {
+    sw.getCurrentUser().then(user => {
+        res.json(user);
+    });
+})
+
 router.get('/groups', (req, res) => {
     sw.getGroups().then(groups => {
         res.json(groups);
